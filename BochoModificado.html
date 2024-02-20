@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bocho de color</title>
+    <style>
+        .container{
+            text-align: center;
+        }
+        .opciones{
+            background-color: rgb(127, 134, 98);
+            width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img id="cambiar-bocho" src="bocho_rojo.jpg" alt="">
+        <div class="opciones">
+            <select id="colorSelect" onchange="cambiarColorA(this.value)">
+                <option value="rojo">Rojo</option>
+                <option value="azul">Azul</option>
+                <option value="amarillo">Amarillo</option>
+                <option value="blanco">Blanco</option>
+            </select>
+        </div>
+    </div>
+    <script>
+        function cambiarColorA(color) {
+            document.getElementById("cambiar-bocho").src="bocho_"+color+".jpg"
+        }
+    </script>
+    
+</body>
+</html>
